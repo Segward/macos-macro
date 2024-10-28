@@ -16,6 +16,7 @@ public:
     void SimulateKeyStroke(CGKeyCode KeyCode);
     void OpenBraveBrowser(const char* URL);
     void CloseBraveBrowser();
+    void MoveMouse(int x, int y, int duration);
 };
 
 // Function to simulate key press
@@ -87,4 +88,40 @@ void MacMacro::OpenBraveBrowser(const char* URL) {
 
 void MacMacro::CloseBraveBrowser() {
     system("kill -9 $(pgrep 'Brave Browser')");
+}
+
+void MacMacro::MoveMouse(int x, int y, int duration) {
+    // Get the current mouse position
+    CGEventRef event = CGEventCreate(NULL);
+    CGPoint mouseLocation = CGEventGetLocation(event);
+    CFRelease(event);
+
+    // Calculate the new mouse position
+    CGPoint newMouseLocation = CGPointMake(mouseLocation.x + x, mouseLocation.y + y);
+
+    // Calculate the number of steps
+    int steps = duration / 10;
+
+    // Calculate the step size
+    float stepX = (newMouseLocation.x - mouseLocation.x) / steps;
+    float stepY = (newMouseLocation.y - mouseLocation.y) / steps;
+
+    // Move the mouse in steps
+    for (int i = 0; i < steps; i++) {
+        mouseLocation.x += stepX;
+        mouseLocation.y += stepY;
+
+        CGEventRef moveEvent = CGEventCreateMouseEvent(
+            NULL, kCGEventMouseMoved, mouseLocation, kCGMouseButtonLeft);
+        CGEventPost(kCGHIDEventTap, moveEvent);
+        CFRelease(moveEvent);
+
+        usleep(10000); // Sleep for 10ms
+    }
+
+    // Move the mouse to the final position
+    CGEventRef moveEvent = CGEventCreateMouseEvent(
+        NULL, kCGEventMouseMoved, newMouseLocation, kCGMouseButtonLeft);
+    CGEventPost(kCGHIDEventTap, moveEvent);
+    CFRelease(moveEvent);
 }

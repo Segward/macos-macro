@@ -1,2 +1,2 @@
-g++ -o main main.cpp -framework ApplicationServices -framework Carbon
-./main
+g++ -o "./Example/Example" "./Example/Example.cpp" -framework ApplicationServices -framework Carbon
+./Example/Example
