@@ -67,16 +67,19 @@ void SimulateKeyStroke(CGKeyCode KeyCode) {
     usleep(50000); // Sleep for 50ms
 }
 
+// Function to open Brave Browser at a specific URL
 void OpenBraveBrowser(const char* URL) {
     std::string command = "open -a 'Brave Browser' '" + std::string(URL) + "'";
     system(command.c_str());
     usleep(3000000); // Sleep for 3 seconds
 }   
 
+// Function to close all instances of Brave Browser
 void CloseBraveBrowser() {
     system("kill -9 $(pgrep 'Brave Browser')");
 }
 
+// Function to move the mouse to a specific position offset from the current position
 void MoveMouse(int x, int y, int duration) {
     // Get the current mouse position
     CGEventRef event = CGEventCreate(NULL);
