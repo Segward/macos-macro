@@ -6,45 +6,32 @@
 #include <unistd.h>
 #include <cstdlib>
 
-class MacMacro {
-public:
-    void SimulateKeyPress(CGKeyCode KeyCode);
-    void SimulateKeyRelease(CGKeyCode KeyCode);
-    bool IsKeyPressed(CGKeyCode KeyCode);
-    bool IsLeftMouseButtonPressed();
-    void SimulateMouseClick();
-    void SimulateKeyStroke(CGKeyCode KeyCode);
-    void OpenBraveBrowser(const char* URL);
-    void CloseBraveBrowser();
-    void MoveMouse(int x, int y, int duration);
-};
-
 // Function to simulate key press
-void MacMacro::SimulateKeyPress(CGKeyCode KeyCode) {
+void SimulateKeyPress(CGKeyCode KeyCode) {
     CGEventRef KeyDownEvent = CGEventCreateKeyboardEvent(NULL, KeyCode, true);
     CGEventPost(kCGHIDEventTap, KeyDownEvent);
     CFRelease(KeyDownEvent);
 }
 
 // Function to simulate key release
-void MacMacro::SimulateKeyRelease(CGKeyCode KeyCode) {
+void SimulateKeyRelease(CGKeyCode KeyCode) {
     CGEventRef KeyUpEvent = CGEventCreateKeyboardEvent(NULL, KeyCode, false);
     CGEventPost(kCGHIDEventTap, KeyUpEvent);
     CFRelease(KeyUpEvent);
 }
 
 // Function to check if a specific key is pressed
-bool MacMacro::IsKeyPressed(CGKeyCode KeyCode) {
+bool IsKeyPressed(CGKeyCode KeyCode) {
     return CGEventSourceKeyState(kCGEventSourceStateHIDSystemState, KeyCode);
 }
 
 // Function to check if the left mouse button is pressed
-bool MacMacro::IsLeftMouseButtonPressed() {
+bool IsLeftMouseButtonPressed() {
     return CGEventSourceButtonState(kCGEventSourceStateHIDSystemState, kCGMouseButtonLeft);
 }
 
 // Function to simulate a left mouse click
-void MacMacro::SimulateMouseClick() {
+void SimulateMouseClick() {
     // Get the current mouse position
     CGEventRef event = CGEventCreate(NULL);
     CGPoint mouseLocation = CGEventGetLocation(event);
@@ -73,24 +60,24 @@ void MacMacro::SimulateMouseClick() {
 }
 
 // Function to simulate key stroke using key press and key release
-void MacMacro::SimulateKeyStroke(CGKeyCode KeyCode) {
+void SimulateKeyStroke(CGKeyCode KeyCode) {
     SimulateKeyPress(KeyCode);
     usleep(50000); // Sleep for 50ms
     SimulateKeyRelease(KeyCode);
     usleep(50000); // Sleep for 50ms
 }
 
-void MacMacro::OpenBraveBrowser(const char* URL) {
+void OpenBraveBrowser(const char* URL) {
     std::string command = "open -a 'Brave Browser' '" + std::string(URL) + "'";
     system(command.c_str());
     usleep(3000000); // Sleep for 3 seconds
 }   
 
-void MacMacro::CloseBraveBrowser() {
+void CloseBraveBrowser() {
     system("kill -9 $(pgrep 'Brave Browser')");
 }
 
-void MacMacro::MoveMouse(int x, int y, int duration) {
+void MoveMouse(int x, int y, int duration) {
     // Get the current mouse position
     CGEventRef event = CGEventCreate(NULL);
     CGPoint mouseLocation = CGEventGetLocation(event);
@@ -120,6 +107,15 @@ void MacMacro::MoveMouse(int x, int y, int duration) {
     }
 
     // Move the mouse to the final position
+    CGEventRef moveEvent = CGEventCreateMouseEvent(
+        NULL, kCGEventMouseMoved, newMouseLocation, kCGMouseButtonLeft);
+    CGEventPost(kCGHIDEventTap, moveEvent);
+    CFRelease(moveEvent);
+}
+
+// Function to set the mouse position
+void SetMousePosition(int x, int y) {
+    CGPoint newMouseLocation = CGPointMake(x, y);
     CGEventRef moveEvent = CGEventCreateMouseEvent(
         NULL, kCGEventMouseMoved, newMouseLocation, kCGMouseButtonLeft);
     CGEventPost(kCGHIDEventTap, moveEvent);
