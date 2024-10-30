@@ -105,7 +105,7 @@ void MoveMouse(int x, int y, int duration) {
             NULL, kCGEventMouseMoved, mouseLocation, kCGMouseButtonLeft);
         CGEventPost(kCGHIDEventTap, moveEvent);
         CFRelease(moveEvent);
-
+        
         usleep(10000); // Sleep for 10ms
     }
 
