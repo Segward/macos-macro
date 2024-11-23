@@ -1,2 +1,2 @@
-g++ -o "./AutoClicker/Example" "./AutoClicker/Example.cpp" -framework ApplicationServices -framework Carbon
-./AutoClicker/Example
+g++ -o "./Example/Example" "./Example/Example.cpp" -framework ApplicationServices -framework Carbon
+./Example/Example
