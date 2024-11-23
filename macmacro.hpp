@@ -38,7 +38,7 @@ void SimulateMouseClick() {
     CFRelease(event);
 
     // Small delay to make the click noticeable
-    usleep(200000); // Sleep for 200ms
+    usleep(100000); // Sleep for 100ms
 
     // Create and post a mouse down event
     CGEventRef mouseDownEvent = CGEventCreateMouseEvent(
@@ -47,7 +47,7 @@ void SimulateMouseClick() {
     CFRelease(mouseDownEvent);
 
     // Small delay to make the click noticeable
-    usleep(200000); // Sleep for 200ms
+    usleep(100000); // Sleep for 100ms
 
     // Create and post a mouse up event
     CGEventRef mouseUpEvent = CGEventCreateMouseEvent(
@@ -56,7 +56,7 @@ void SimulateMouseClick() {
     CFRelease(mouseUpEvent);
 
     // Small delay to safeguard 
-    usleep(200000); // Sleep for 200ms
+    usleep(100000); // Sleep for 100ms
 }
 
 // Function to simulate key stroke using key press and key release

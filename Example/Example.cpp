@@ -19,7 +19,7 @@ int main() {
 
         // Simulate key stroke '1'
         SimulateKeyStroke(kVK_ANSI_1);
-        usleep(2750000); // Sleep for 2 seconds and 750 milliseconds
+        usleep(2650000); // Sleep for 2 seconds and 650 milliseconds
 
         // Simulate key stroke '2'
         SimulateKeyStroke(kVK_ANSI_2);
@@ -31,7 +31,7 @@ int main() {
 
         // Simulate key release 'C'
         SimulateKeyRelease(kVK_ANSI_C);
-        usleep(5000000); // Sleep for 5 seconds
+        usleep(4700000); // Sleep for 4 seconds and 700 milliseconds
         
     }
 
