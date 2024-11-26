@@ -38,11 +38,13 @@ int main() {
 
         // Since each loop is like 15 seconds, this will take 12.5 minutes
         // Time to here is roughly 13.5 minutes
-        // I need to make a wait to make time to 31 minutes
-        // I will make a wait of 17.5 minutes which is 1050 seconds
-        usleep(1050000000); 
+        // Press 1 every 1 minute for 18 minutes
+        for (int i = 0; i < 18; ++i) {
+            usleep(60000000);
+            SimulateKeyStroke(kVK_ANSI_1);
+        }
 
-        // Time to here is roughly 31 minutes
+        // Time to here is roughly 31.5 minutes
         SetApeTransformation();
         ApeTransform();
 
