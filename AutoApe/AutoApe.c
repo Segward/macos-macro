@@ -1,4 +1,4 @@
-#include "../macmacro.hpp"
+#include "../macmacro.h"
 
 int main() {
 

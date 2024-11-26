@@ -1,6 +1,5 @@
-#include "../macmacro.hpp"
-#include <cstdlib> 
-#include <ctime>  
+#include "../macmacro.h"
+#include <time.h>  
 
 int main() {
 
