@@ -1,8 +1,8 @@
 # MacMacro
 
-This is a macro written in C++ for MacOs
+This macro was originally made in C++ but it got transfered to C.
 
 # Usage
 
-I made a simple shell script that compiles and runs the example code. 
-First ensure the script has execute permissions: ` chmod +x run.sh ` then run the script with: ` ./run.sh ` 
+I made a build shell script that compiles my example macros into the build folder. <br/>
+To give permission to the shellscript use `chmod +x run.sh` and to build use `./build.sh`
