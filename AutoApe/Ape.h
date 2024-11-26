@@ -2,10 +2,10 @@
 
 void StartNewGame() {
     OpenBrowser("Brave Browser", "https://www.roblox.com/games/8246874626/Scythe-Dragon-Soul-Anime-Adventure?privateServerLinkCode=45409394009317100111510273891252");
-    usleep(30000000);
+    usleep(25000000);
     CloseBrowser("Brave Browser");
     SimulateKeyStroke(kVK_Return);
-    usleep(30000000);
+    usleep(25000000);
 }
 
 void StartFlight() {
