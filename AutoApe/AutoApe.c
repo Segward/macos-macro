@@ -30,18 +30,11 @@ int main() {
         ResetCharacter();
 
         // Time to here is roughly 1 minute
-        for (int i = 0; i < 50; ++i) {
+        // One loop is roughly 15 seconds and I need it to last 30 minutes so 120 loops
+        for (int i = 0; i < 120; ++i) {
             Transform();
             UseNegativeHail();
             ResetCharacter();
-        }
-
-        // Since each loop is like 15 seconds, this will take 12.5 minutes
-        // Time to here is roughly 13.5 minutes
-        // Press 1 every 1 minute for 18 minutes
-        for (int i = 0; i < 18; ++i) {
-            usleep(60000000);
-            SimulateKeyStroke(kVK_ANSI_1);
         }
 
         // Time to here is roughly 31.5 minutes
