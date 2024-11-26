@@ -6,8 +6,10 @@ int main() {
 
     while (true) {
 
-        // Begin the loop and get to ape
+        // This takes a minute but we ignore it
         StartNewGame();
+
+        // Time begin here 
         Transform();
         StartFlight();
         usleep(1000000);
