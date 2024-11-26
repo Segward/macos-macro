@@ -9,6 +9,9 @@ int main() {
         // Open game
         StartNewGame();
 
+        // Set lssj transformation
+        SetLssjTransformation();
+
         // Go to ape
         Transform();
         StartFlight();
@@ -43,9 +46,6 @@ int main() {
             usleep(60000000);
             SimulateKeyStroke(kVK_ANSI_2);
         }
-
-        // Set lssj transformation
-        SetLssjTransformation();
        
     }
 
