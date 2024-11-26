@@ -5,7 +5,7 @@ void StartNewGame() {
     usleep(25000000);
     CloseBrowser("Brave Browser");
     SimulateKeyStroke(kVK_Return);
-    usleep(25000000);
+    usleep(30000000);
 }
 
 void StartFlight() {
