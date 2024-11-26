@@ -6,10 +6,10 @@ int main() {
 
     while (true) {
 
-        // This takes a minute but we ignore it
+        // Open game
         StartNewGame();
 
-        // Time begin here 
+        // Go to ape
         Transform();
         StartFlight();
         usleep(1000000);
@@ -29,7 +29,6 @@ int main() {
         UseNegativeHail();
         ResetCharacter();
 
-        // Time to here is roughly 1 minute
         // One loop is roughly 15 seconds and I need it to last 30 minutes so 120 loops
         for (int i = 0; i < 120; ++i) {
             Transform();
@@ -37,11 +36,9 @@ int main() {
             ResetCharacter();
         }
 
-        // Time to here is roughly 31.5 minutes
+        // Ape transformation and afk for 30 minutes
         SetApeTransformation();
         ApeTransform();
-
-        // Press 2 every minute for 30 minutes
         for (int i = 0; i < 30; ++i) {
             usleep(60000000);
             SimulateKeyStroke(kVK_ANSI_2);
