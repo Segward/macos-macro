@@ -1,4 +1,4 @@
-#include "../macmacro.h"
+#include "../MacMacro.h"
 #include <time.h>  
 
 int main() {
