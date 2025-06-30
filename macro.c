@@ -23,7 +23,7 @@ int main() {
       SimulateKeyStroke(keyCode6);
       usleep(5000000);
       SimulateKeyPress(keyCodeC);
-      usleep(8000000);
+      usleep(7500000);
       SimulateKeyRelease(keyCodeC);
       usleep(1000000);
     }
