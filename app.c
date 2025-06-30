@@ -2,10 +2,8 @@
 #include <time.h>  
 
 int main() {
-
     srand(time(NULL));
     usleep(3000000);
-
     printf("AutoClicker started\n");
 
     while (true) {
