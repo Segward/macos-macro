@@ -7,13 +7,25 @@ int main() {
     printf("Starting the macro\n");
 
     CGKeyCode keyCodeE = 14;
+    CGKeyCode keyCodeC = 8;
     CGKeyCode keyCode1 = 18;
-    CGKeyCode keyCode6 = 27;
+    CGKeyCode keyCode6 = 22;
 
     while (true) {
       SimulateKeyStroke(keyCodeE);
       usleep(1000000);
-      MoveMouse(-200, 500, 2);
+      MoveMouse(-100, 410, 1000);
+      usleep(1000000);
+      SimulateMouseClick();
+      usleep(1000000);
+      SimulateKeyStroke(keyCode1);
+      usleep(2000000);
+      SimulateKeyStroke(keyCode6);
+      usleep(5000000);
+      SimulateKeyPress(keyCodeC);
+      usleep(8000000);
+      SimulateKeyRelease(keyCodeC);
+      usleep(1000000);
     }
 
     return 0;
