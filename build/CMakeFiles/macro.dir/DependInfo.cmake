@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/gustavskyberg/Home/Programming/MacMacro/macro.c" "CMakeFiles/macro.dir/macro.c.o" "gcc" "CMakeFiles/macro.dir/macro.c.o.d"
+  "/Users/gustavskyberg/Home/Programming/MacMacro/src/macro.c" "CMakeFiles/macro.dir/src/macro.c.o" "gcc" "CMakeFiles/macro.dir/src/macro.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

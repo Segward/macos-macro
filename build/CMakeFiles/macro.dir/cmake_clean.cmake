@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/macro.dir/macro.c.o"
-  "CMakeFiles/macro.dir/macro.c.o.d"
+  "CMakeFiles/macro.dir/src/macro.c.o"
+  "CMakeFiles/macro.dir/src/macro.c.o.d"
   "macro"
   "macro.pdb"
 )

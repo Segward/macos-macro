@@ -69,28 +69,28 @@ include CMakeFiles/macro.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/macro.dir/flags.make
 
-CMakeFiles/macro.dir/macro.c.o: CMakeFiles/macro.dir/flags.make
-CMakeFiles/macro.dir/macro.c.o: /Users/gustavskyberg/Home/Programming/MacMacro/macro.c
-CMakeFiles/macro.dir/macro.c.o: CMakeFiles/macro.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/gustavskyberg/Home/Programming/MacMacro/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/macro.dir/macro.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/macro.dir/macro.c.o -MF CMakeFiles/macro.dir/macro.c.o.d -o CMakeFiles/macro.dir/macro.c.o -c /Users/gustavskyberg/Home/Programming/MacMacro/macro.c
+CMakeFiles/macro.dir/src/macro.c.o: CMakeFiles/macro.dir/flags.make
+CMakeFiles/macro.dir/src/macro.c.o: /Users/gustavskyberg/Home/Programming/MacMacro/src/macro.c
+CMakeFiles/macro.dir/src/macro.c.o: CMakeFiles/macro.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/gustavskyberg/Home/Programming/MacMacro/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/macro.dir/src/macro.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/macro.dir/src/macro.c.o -MF CMakeFiles/macro.dir/src/macro.c.o.d -o CMakeFiles/macro.dir/src/macro.c.o -c /Users/gustavskyberg/Home/Programming/MacMacro/src/macro.c
 
-CMakeFiles/macro.dir/macro.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/macro.dir/macro.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavskyberg/Home/Programming/MacMacro/macro.c > CMakeFiles/macro.dir/macro.c.i
+CMakeFiles/macro.dir/src/macro.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/macro.dir/src/macro.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavskyberg/Home/Programming/MacMacro/src/macro.c > CMakeFiles/macro.dir/src/macro.c.i
 
-CMakeFiles/macro.dir/macro.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/macro.dir/macro.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavskyberg/Home/Programming/MacMacro/macro.c -o CMakeFiles/macro.dir/macro.c.s
+CMakeFiles/macro.dir/src/macro.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/macro.dir/src/macro.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavskyberg/Home/Programming/MacMacro/src/macro.c -o CMakeFiles/macro.dir/src/macro.c.s
 
 # Object files for target macro
 macro_OBJECTS = \
-"CMakeFiles/macro.dir/macro.c.o"
+"CMakeFiles/macro.dir/src/macro.c.o"
 
 # External object files for target macro
 macro_EXTERNAL_OBJECTS =
 
-macro: CMakeFiles/macro.dir/macro.c.o
+macro: CMakeFiles/macro.dir/src/macro.c.o
 macro: CMakeFiles/macro.dir/build.make
 macro: CMakeFiles/macro.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/gustavskyberg/Home/Programming/MacMacro/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable macro"

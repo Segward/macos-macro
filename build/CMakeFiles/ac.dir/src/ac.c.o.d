@@ -1,6 +1,6 @@
-CMakeFiles/macro.dir/macro.c.o: \
-  /Users/gustavskyberg/Home/Programming/MacMacro/macro.c \
-  /Users/gustavskyberg/Home/Programming/MacMacro/macmacro.h \
+CMakeFiles/ac.dir/src/ac.c.o: \
+  /Users/gustavskyberg/Home/Programming/MacMacro/src/ac.c \
+  /Users/gustavskyberg/Home/Programming/MacMacro/src/macmacro.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/System/Library/Frameworks/ApplicationServices.framework/Headers/ApplicationServices.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/Availability.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.5.sdk/usr/include/AvailabilityVersions.h \

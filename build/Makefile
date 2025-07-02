@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named app
+# Target rules for targets named ac
 
 # Build rule for target.
-app: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 app
-.PHONY : app
+ac: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ac
+.PHONY : ac
 
 # fast build rule for target.
-app/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/build
-.PHONY : app/fast
+ac/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ac.dir/build.make CMakeFiles/ac.dir/build
+.PHONY : ac/fast
 
 #=============================================================================
 # Target rules for targets named macro
@@ -142,53 +142,53 @@ macro/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/macro.dir/build.make CMakeFiles/macro.dir/build
 .PHONY : macro/fast
 
-app.o: app.c.o
-.PHONY : app.o
+src/ac.o: src/ac.c.o
+.PHONY : src/ac.o
 
 # target to build an object file
-app.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/app.c.o
-.PHONY : app.c.o
+src/ac.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ac.dir/build.make CMakeFiles/ac.dir/src/ac.c.o
+.PHONY : src/ac.c.o
 
-app.i: app.c.i
-.PHONY : app.i
+src/ac.i: src/ac.c.i
+.PHONY : src/ac.i
 
 # target to preprocess a source file
-app.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/app.c.i
-.PHONY : app.c.i
+src/ac.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ac.dir/build.make CMakeFiles/ac.dir/src/ac.c.i
+.PHONY : src/ac.c.i
 
-app.s: app.c.s
-.PHONY : app.s
+src/ac.s: src/ac.c.s
+.PHONY : src/ac.s
 
 # target to generate assembly for a file
-app.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/app.dir/build.make CMakeFiles/app.dir/app.c.s
-.PHONY : app.c.s
+src/ac.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ac.dir/build.make CMakeFiles/ac.dir/src/ac.c.s
+.PHONY : src/ac.c.s
 
-macro.o: macro.c.o
-.PHONY : macro.o
+src/macro.o: src/macro.c.o
+.PHONY : src/macro.o
 
 # target to build an object file
-macro.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/macro.dir/build.make CMakeFiles/macro.dir/macro.c.o
-.PHONY : macro.c.o
+src/macro.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/macro.dir/build.make CMakeFiles/macro.dir/src/macro.c.o
+.PHONY : src/macro.c.o
 
-macro.i: macro.c.i
-.PHONY : macro.i
+src/macro.i: src/macro.c.i
+.PHONY : src/macro.i
 
 # target to preprocess a source file
-macro.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/macro.dir/build.make CMakeFiles/macro.dir/macro.c.i
-.PHONY : macro.c.i
+src/macro.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/macro.dir/build.make CMakeFiles/macro.dir/src/macro.c.i
+.PHONY : src/macro.c.i
 
-macro.s: macro.c.s
-.PHONY : macro.s
+src/macro.s: src/macro.c.s
+.PHONY : src/macro.s
 
 # target to generate assembly for a file
-macro.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/macro.dir/build.make CMakeFiles/macro.dir/macro.c.s
-.PHONY : macro.c.s
+src/macro.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/macro.dir/build.make CMakeFiles/macro.dir/src/macro.c.s
+.PHONY : src/macro.c.s
 
 # Help Target
 help:
@@ -198,14 +198,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... app"
+	@echo "... ac"
 	@echo "... macro"
-	@echo "... app.o"
-	@echo "... app.i"
-	@echo "... app.s"
-	@echo "... macro.o"
-	@echo "... macro.i"
-	@echo "... macro.s"
+	@echo "... src/ac.o"
+	@echo "... src/ac.i"
+	@echo "... src/ac.s"
+	@echo "... src/macro.o"
+	@echo "... src/macro.i"
+	@echo "... src/macro.s"
 .PHONY : help
 
 
