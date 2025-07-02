@@ -1,14 +1,32 @@
 #include "macmacro.h"
 #include <time.h>  
 
-int main() {
+unsigned int getRandomDelay(int min, int max) {
+    return min + (rand() % (max - min + 1));
+}
+
+int main(int argc, char *argv[]) {
+    if (argc < 2) {
+      printf("Needs specified delay threshold in microseconds 10^5\n");
+      return 1;
+    }
+  
+    if (argc != 2) {
+      printf("Needs specified delay threshold in microseconds 10^5\n");
+      return 1;
+    }
+
+    unsigned int threshold = atoi(argv[1]);
     srand(time(NULL));
     usleep(3000000);
-    printf("AutoClicker started\n");
+    printf("App started\n");
+
+    unsigned int min = threshold - 500000;
+    unsigned int max = threshold + 500000;
 
     while (true) {
         SimulateMouseClick();
-        unsigned int delay = 100000 + (rand() % (2000000 - 100000 + 1));
+        unsigned int delay = getRandomDelay(min, max);
         printf("Next click in %u microseconds\n", delay);
         usleep(delay);
     }

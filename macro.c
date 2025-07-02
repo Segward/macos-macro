@@ -14,7 +14,7 @@ int main() {
     while (true) {
       SimulateKeyStroke(keyCodeE);
       usleep(1000000);
-      MoveMouse(-100, 410, 1000);
+      MoveMouse(-100, 410, 100);
       usleep(1000000);
       SimulateMouseClick();
       usleep(1000000);
