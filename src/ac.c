@@ -7,12 +7,12 @@ unsigned int getRandomDelay(int min, int max) {
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {
-      printf("Needs specified delay threshold in microseconds 10^5\n");
+      printf("Needs specified delay threshold in microseconds 10^6\n");
       return 1;
     }
   
     if (argc != 2) {
-      printf("Needs specified delay threshold in microseconds 10^5\n");
+      printf("Needs specified delay threshold in microseconds 10^6\n");
       return 1;
     }
 
