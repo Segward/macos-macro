@@ -8,8 +8,8 @@ int main() {
 
     CGKeyCode keyCodeE = 14;
     CGKeyCode keyCodeC = 8;
-    CGKeyCode keyCode1 = 18;
-    CGKeyCode keyCode6 = 22;
+    CGKeyCode keyCode3 = 20;
+    CGKeyCode keyCode4 = 21;
 
     while (true) {
       SimulateKeyStroke(keyCodeE);
@@ -18,9 +18,9 @@ int main() {
       usleep(1000000);
       SimulateMouseClick();
       usleep(1000000);
-      SimulateKeyStroke(keyCode1);
+      SimulateKeyStroke(keyCode3);
       usleep(2000000);
-      SimulateKeyStroke(keyCode6);
+      SimulateKeyStroke(keyCode4);
       usleep(5000000);
       SimulateKeyPress(keyCodeC);
       usleep(7500000);
