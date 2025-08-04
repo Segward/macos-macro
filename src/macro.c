@@ -6,10 +6,11 @@ int main() {
     usleep(3000000);
     printf("Starting the macro\n");
 
+    // https://eastmanreference.com/complete-list-of-applescript-key-codes
     CGKeyCode keyCodeE = 14;
     CGKeyCode keyCodeC = 8;
-    CGKeyCode keyCode3 = 20;
-    CGKeyCode keyCode4 = 21;
+    CGKeyCode keyCode5 = 23;
+    CGKeyCode keyCode6 = 22; 
 
     while (true) {
       SimulateKeyStroke(keyCodeE);
@@ -18,9 +19,9 @@ int main() {
       usleep(1000000);
       SimulateMouseClick();
       usleep(1000000);
-      SimulateKeyStroke(keyCode3);
+      SimulateKeyStroke(keyCode5);
       usleep(2000000);
-      SimulateKeyStroke(keyCode4);
+      SimulateKeyStroke(keyCode6);
       usleep(5000000);
       SimulateKeyPress(keyCodeC);
       usleep(7500000);
