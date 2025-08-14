@@ -2,6 +2,28 @@
 
 This macro was originally made in C++ but it got transfered to C.
 
-# Usage
+## How to build
+```sh
+mkdir build
+cd build
+cmake ..
+make
+```
 
-Build the project with `make` in the build directory. You can run the two different binaries with `./ac <duration>` and `./macro`. The duration is set in macroseconds.
+## How to run auto clicker
+```sh
+cd build
+./ac <duration>
+```
+
+Where duration is in microseconds. For example, to run the auto clicker for 5 seconds:
+```sh
+./ac 5000000
+```
+
+## How to run macro
+```sh
+cd build
+./macro
+```
+
