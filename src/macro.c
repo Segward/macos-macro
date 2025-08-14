@@ -9,8 +9,7 @@ int main() {
     // https://eastmanreference.com/complete-list-of-applescript-key-codes
     CGKeyCode keyCodeE = 14;
     CGKeyCode keyCodeC = 8;
-    CGKeyCode keyCode5 = 23;
-    CGKeyCode keyCode6 = 22; 
+    CGKeyCode keyCode1 = 18; 
 
     while (true) {
       SimulateKeyStroke(keyCodeE);
@@ -19,10 +18,8 @@ int main() {
       usleep(1000000);
       SimulateMouseClick();
       usleep(1000000);
-      SimulateKeyStroke(keyCode5);
-      usleep(2000000);
-      SimulateKeyStroke(keyCode6);
-      usleep(5000000);
+      SimulateKeyStroke(keyCode1);
+      usleep(7000000);
       SimulateKeyPress(keyCodeC);
       usleep(7500000);
       SimulateKeyRelease(keyCodeC);

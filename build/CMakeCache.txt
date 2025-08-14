@@ -134,7 +134,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=MacMacro
+CMAKE_PROJECT_NAME:STATIC=macos-macro
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -209,6 +209,15 @@ MacMacro_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 MacMacro_SOURCE_DIR:STATIC=/Users/gustavskyberg/Home/Programming/MacMacro
+
+//Value Computed by CMake
+macos-macro_BINARY_DIR:STATIC=/Users/gustavskyberg/Home/Programming/MacMacro/build
+
+//Value Computed by CMake
+macos-macro_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+macos-macro_SOURCE_DIR:STATIC=/Users/gustavskyberg/Home/Programming/MacMacro
 
 
 ########################
