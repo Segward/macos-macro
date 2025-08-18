@@ -17,9 +17,9 @@ int main(int argc, char *argv[]) {
   CGKeyCode keyCode3 = 20;
   CGKeyCode keyCode4 = 21;
 
-  unsigned int threshold = 20000;
-  unsigned int min = threshold - 5000;
-  unsigned int max = threshold + 5000;
+  unsigned int threshold = 50000;
+  unsigned int min = threshold - 10000;
+  unsigned int max = threshold + 10000;
 
   int i = 0;
   while (true) {
