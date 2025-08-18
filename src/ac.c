@@ -26,7 +26,6 @@ int main(int argc, char *argv[]) {
 
     while (true) {
         SimulateMouseClick();
-        printf("Mouse click simulated\n");
         unsigned int delay = getRandomDelay(min, max);
         printf("Next click in %u microseconds\n", delay);
         usleep(delay);
