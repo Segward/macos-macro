@@ -21,11 +21,12 @@ int main(int argc, char *argv[]) {
     usleep(3000000);
     printf("App started\n");
 
-    unsigned int min = threshold - 500000;
-    unsigned int max = threshold + 500000;
+    unsigned int min = threshold - 50000;
+    unsigned int max = threshold + 50000;
 
     while (true) {
         SimulateMouseClick();
+        printf("Mouse click simulated\n");
         unsigned int delay = getRandomDelay(min, max);
         printf("Next click in %u microseconds\n", delay);
         usleep(delay);

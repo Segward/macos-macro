@@ -35,19 +35,19 @@ void SimulateMouseClick() {
     CGEventRef event = CGEventCreate(NULL);
     CGPoint mouseLocation = CGEventGetLocation(event);
     CFRelease(event);
-    usleep(100000); 
+    usleep(1000); 
 
     CGEventRef mouseDownEvent = CGEventCreateMouseEvent(
         NULL, kCGEventLeftMouseDown, mouseLocation, kCGMouseButtonLeft);
     CGEventPost(kCGHIDEventTap, mouseDownEvent);
     CFRelease(mouseDownEvent);
-    usleep(100000);
+    usleep(1000);
 
     CGEventRef mouseUpEvent = CGEventCreateMouseEvent(
         NULL, kCGEventLeftMouseUp, mouseLocation, kCGMouseButtonLeft);
     CGEventPost(kCGHIDEventTap, mouseUpEvent);
     CFRelease(mouseUpEvent);
-    usleep(100000);
+    usleep(1000);
 }
 
 // Function to simulate key stroke using key press and key release
