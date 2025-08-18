@@ -13,15 +13,13 @@ int main(int argc, char *argv[]) {
   CGKeyCode keyCodeC = 8;
   CGKeyCode keyCodeV = 9;
   CGKeyCode keyCode1 = 18;
-  CGKeyCode keyCode2 = 19;
-  CGKeyCode keyCode3 = 20;
-  CGKeyCode keyCode4 = 21;
-
-  unsigned int threshold = 100000;
+  
+  unsigned int threshold = 200000;
   unsigned int min = threshold - 10000;
   unsigned int max = threshold + 10000;
 
-  int i = 1;
+  int i = 0;
+  int j = 0;
   while (true) {
     if (i % 1000 == 0) {
       printf("Charging\n");
@@ -33,19 +31,12 @@ int main(int argc, char *argv[]) {
 
     if (i % 10 == 0) {
       printf("Iteration %d\n", i);
-      SimulateKeyPress(keyCode1);
+      CGKeyCode skill = keyCode1 + (j % 4);
+      SimulateKeyPress(skill);
       usleep(1000);
-      SimulateKeyRelease(keyCode1);
-      SimulateKeyPress(keyCode2);
+      SimulateKeyRelease(skill);
       usleep(1000);
-      SimulateKeyRelease(keyCode2);
-      SimulateKeyPress(keyCode3);
-      usleep(1000);
-      SimulateKeyRelease(keyCode3);
-      SimulateKeyPress(keyCode4);
-      usleep(1000);
-      SimulateKeyRelease(keyCode4);
-      usleep(1000);
+      j++;
     }
 
     SimulateKeyPress(keyCodeV);
