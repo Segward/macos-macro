@@ -24,6 +24,7 @@ int main(int argc, char *argv[]) {
   int i = 1;
   while (true) {
     if (i % 1000 == 0) {
+      printf("Charging\n");
       SimulateKeyPress(keyCodeC);
       usleep(3000000);
       SimulateKeyRelease(keyCodeC);
