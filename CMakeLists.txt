@@ -8,5 +8,8 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 add_executable(ac src/ac.c)
 target_link_libraries(ac ${APP_SERVICES} ${CARBON_FRAMEWORK})
 
-add_executable(macro src/macro.c)
-target_link_libraries(macro ${APP_SERVICES} ${CARBON_FRAMEWORK})
+add_executable(lb src/lb.c)
+target_link_libraries(lb ${APP_SERVICES} ${CARBON_FRAMEWORK})
+
+add_executable(km src/km.c)
+target_link_libraries(km ${APP_SERVICES} ${CARBON_FRAMEWORK})
