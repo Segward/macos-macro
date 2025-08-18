@@ -17,19 +17,21 @@ int main(int argc, char *argv[]) {
   CGKeyCode keyCode3 = 20;
   CGKeyCode keyCode4 = 21;
 
-  unsigned int threshold = 50000;
+  unsigned int threshold = 100000;
   unsigned int min = threshold - 10000;
   unsigned int max = threshold + 10000;
 
-  int i = 0;
+  int i = 1;
   while (true) {
     if (i % 1000 == 0) {
       SimulateKeyPress(keyCodeC);
       usleep(3000000);
       SimulateKeyRelease(keyCodeC);
+      usleep(1000);
     }
 
-    if (i % 10) {
+    if (i % 10 == 0) {
+      printf("Iteration %d\n", i);
       SimulateKeyPress(keyCode1);
       usleep(1000);
       SimulateKeyRelease(keyCode1);
