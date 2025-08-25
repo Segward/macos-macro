@@ -13,3 +13,6 @@ target_link_libraries(lb ${APP_SERVICES} ${CARBON_FRAMEWORK})
 
 add_executable(km src/km.c)
 target_link_libraries(km ${APP_SERVICES} ${CARBON_FRAMEWORK})
+
+add_executable(cf src/cf.c)
+target_link_libraries(cf ${APP_SERVICES} ${CARBON_FRAMEWORK})
