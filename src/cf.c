@@ -12,13 +12,12 @@ int main(int argc, char *argv[]) {
 
   while (true) {
     OpenBrowser("Brave Browser", "https://www.roblox.com/games/8246874626/2x-KK-x100-Dragon-Soul-Anime-MMO?privateServerLinkCode=50476890616776440184631035939790");
-
     usleep(15000000);
     CloseBrowser("Brave Browser");
-    usleep(5000000);
+    usleep(7000000);
     SimulateKeyPress(keyCodeS);
     SimulateKeyPress(keyCodeA);
-    usleep(600000);
+    usleep(1000000);
     SimulateKeyRelease(keyCodeS);
     SimulateKeyRelease(keyCodeA);
     usleep(50000);
